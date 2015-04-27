@@ -13,4 +13,16 @@ public partial class MainWindow: Gtk.Window
 		Application.Quit ();
 		a.RetVal = true;
 	}
+	protected void about (object sender, EventArgs e)
+	{
+		AboutDialog about = new AboutDialog();
+		about.ProgramName = "Tehillim";
+		about.Version = "1.0";
+		about.Run ();
+		about.Destroy();
+	}	protected void psalmSelected (object sender, EventArgs e)
+	{
+	}
+
+
 }

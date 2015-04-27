@@ -20,15 +20,12 @@
         <property name="Label" translatable="yes">Help</property>
         <property name="ShortLabel" translatable="yes">Help</property>
       </action>
-      <action id="indexAction">
+      <action id="AboutAction">
         <property name="Type">Action</property>
-        <property name="Label" translatable="yes" />
-        <property name="StockId">gtk-index</property>
-      </action>
-      <action id="boldAction">
-        <property name="Type">Action</property>
-        <property name="Label" translatable="yes" />
-        <property name="StockId">gtk-bold</property>
+        <property name="Accelerator">&lt;Mod2&gt;space</property>
+        <property name="Label" translatable="yes">About</property>
+        <property name="ShortLabel" translatable="yes">About</property>
+        <signal name="Activated" handler="about" />
       </action>
     </action-group>
     <property name="MemberName" />
@@ -44,7 +41,9 @@
             <property name="MemberName" />
             <node name="mainMenuBar" type="Menubar">
               <node type="Menu" action="FileAction" />
-              <node type="Menu" action="HelpAction" />
+              <node type="Menu" action="HelpAction">
+                <node type="Menuitem" action="AboutAction" />
+              </node>
             </node>
           </widget>
           <packing>
@@ -60,10 +59,30 @@
             <property name="CanFocus">True</property>
             <property name="Position">160</property>
             <child>
-              <widget class="Gtk.ComboBox" id="psalmNumberSelector">
+              <widget class="Gtk.VPaned" id="vpaned1">
                 <property name="MemberName" />
-                <property name="IsTextCombo">True</property>
-                <property name="Items" translatable="yes" />
+                <property name="CanFocus">True</property>
+                <property name="Position">35</property>
+                <child>
+                  <widget class="Gtk.ComboBox" id="psalmNumberSelector">
+                    <property name="MemberName">psalmNumberSelector</property>
+                    <property name="IsTextCombo">True</property>
+                    <property name="Items" translatable="yes" />
+                  </widget>
+                  <packing>
+                    <property name="Resize">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Button" id="psalmSelectButton">
+                    <property name="MemberName" />
+                    <property name="CanFocus">True</property>
+                    <property name="Type">TextOnly</property>
+                    <property name="Label" translatable="yes">GtkButton</property>
+                    <property name="UseUnderline">True</property>
+                    <signal name="Clicked" handler="psalmSelected" />
+                  </widget>
+                </child>
               </widget>
               <packing>
                 <property name="Resize">False</property>

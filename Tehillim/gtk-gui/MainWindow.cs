@@ -6,12 +6,13 @@ public partial class MainWindow
 	private global::Gtk.UIManager UIManager;
 	private global::Gtk.Action FileAction;
 	private global::Gtk.Action HelpAction;
-	private global::Gtk.Action indexAction;
-	private global::Gtk.Action boldAction;
+	private global::Gtk.Action AboutAction;
 	private global::Gtk.VBox vbox1;
 	private global::Gtk.MenuBar mainMenuBar;
 	private global::Gtk.HPaned hpaned1;
+	private global::Gtk.VPaned vpaned1;
 	private global::Gtk.ComboBox psalmNumberSelector;
+	private global::Gtk.Button psalmSelectButton;
 	private global::Gtk.VBox vbox3;
 	private global::Gtk.ComboBox psalmVersionSelector;
 	private global::Gtk.ScrolledWindow GtkScrolledWindow;
@@ -29,10 +30,9 @@ public partial class MainWindow
 		this.HelpAction = new global::Gtk.Action ("HelpAction", global::Mono.Unix.Catalog.GetString ("Help"), null, null);
 		this.HelpAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Help");
 		w1.Add (this.HelpAction, null);
-		this.indexAction = new global::Gtk.Action ("indexAction", null, null, "gtk-index");
-		w1.Add (this.indexAction, null);
-		this.boldAction = new global::Gtk.Action ("boldAction", null, null, "gtk-bold");
-		w1.Add (this.boldAction, null);
+		this.AboutAction = new global::Gtk.Action ("AboutAction", global::Mono.Unix.Catalog.GetString ("About"), null, null);
+		this.AboutAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("About");
+		w1.Add (this.AboutAction, "<Mod2>space");
 		this.UIManager.InsertActionGroup (w1, 0);
 		this.AddAccelGroup (this.UIManager.AccelGroup);
 		this.Name = "MainWindow";
@@ -43,7 +43,7 @@ public partial class MainWindow
 		this.vbox1.Name = "vbox1";
 		this.vbox1.Spacing = 6;
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.UIManager.AddUiFromString ("<ui><menubar name='mainMenuBar'><menu name='FileAction' action='FileAction'/><menu name='HelpAction' action='HelpAction'/></menubar></ui>");
+		this.UIManager.AddUiFromString ("<ui><menubar name='mainMenuBar'><menu name='FileAction' action='FileAction'/><menu name='HelpAction' action='HelpAction'><menuitem name='AboutAction' action='AboutAction'/></menu></menubar></ui>");
 		this.mainMenuBar = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/mainMenuBar")));
 		this.mainMenuBar.Name = "mainMenuBar";
 		this.vbox1.Add (this.mainMenuBar);
@@ -57,11 +57,26 @@ public partial class MainWindow
 		this.hpaned1.Name = "hpaned1";
 		this.hpaned1.Position = 160;
 		// Container child hpaned1.Gtk.Paned+PanedChild
+		this.vpaned1 = new global::Gtk.VPaned ();
+		this.vpaned1.CanFocus = true;
+		this.vpaned1.Name = "vpaned1";
+		this.vpaned1.Position = 35;
+		// Container child vpaned1.Gtk.Paned+PanedChild
 		this.psalmNumberSelector = global::Gtk.ComboBox.NewText ();
 		this.psalmNumberSelector.Name = "psalmNumberSelector";
-		this.hpaned1.Add (this.psalmNumberSelector);
-		global::Gtk.Paned.PanedChild w3 = ((global::Gtk.Paned.PanedChild)(this.hpaned1 [this.psalmNumberSelector]));
+		this.vpaned1.Add (this.psalmNumberSelector);
+		global::Gtk.Paned.PanedChild w3 = ((global::Gtk.Paned.PanedChild)(this.vpaned1 [this.psalmNumberSelector]));
 		w3.Resize = false;
+		// Container child vpaned1.Gtk.Paned+PanedChild
+		this.psalmSelectButton = new global::Gtk.Button ();
+		this.psalmSelectButton.CanFocus = true;
+		this.psalmSelectButton.Name = "psalmSelectButton";
+		this.psalmSelectButton.UseUnderline = true;
+		this.psalmSelectButton.Label = global::Mono.Unix.Catalog.GetString ("GtkButton");
+		this.vpaned1.Add (this.psalmSelectButton);
+		this.hpaned1.Add (this.vpaned1);
+		global::Gtk.Paned.PanedChild w5 = ((global::Gtk.Paned.PanedChild)(this.hpaned1 [this.vpaned1]));
+		w5.Resize = false;
 		// Container child hpaned1.Gtk.Paned+PanedChild
 		this.vbox3 = new global::Gtk.VBox ();
 		this.vbox3.Name = "vbox3";
@@ -70,10 +85,10 @@ public partial class MainWindow
 		this.psalmVersionSelector = global::Gtk.ComboBox.NewText ();
 		this.psalmVersionSelector.Name = "psalmVersionSelector";
 		this.vbox3.Add (this.psalmVersionSelector);
-		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox3 [this.psalmVersionSelector]));
-		w4.Position = 0;
-		w4.Expand = false;
-		w4.Fill = false;
+		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox3 [this.psalmVersionSelector]));
+		w6.Position = 0;
+		w6.Expand = false;
+		w6.Fill = false;
 		// Container child vbox3.Gtk.Box+BoxChild
 		this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
 		this.GtkScrolledWindow.Name = "GtkScrolledWindow";
@@ -85,12 +100,12 @@ public partial class MainWindow
 		this.psalmViewingSpace.Editable = false;
 		this.GtkScrolledWindow.Add (this.psalmViewingSpace);
 		this.vbox3.Add (this.GtkScrolledWindow);
-		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox3 [this.GtkScrolledWindow]));
-		w6.Position = 1;
+		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox3 [this.GtkScrolledWindow]));
+		w8.Position = 1;
 		this.hpaned1.Add (this.vbox3);
 		this.vbox1.Add (this.hpaned1);
-		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hpaned1]));
-		w8.Position = 1;
+		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hpaned1]));
+		w10.Position = 1;
 		this.Add (this.vbox1);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
@@ -99,5 +114,7 @@ public partial class MainWindow
 		this.DefaultHeight = 556;
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
+		this.AboutAction.Activated += new global::System.EventHandler (this.about);
+		this.psalmSelectButton.Clicked += new global::System.EventHandler (this.psalmSelected);
 	}
 }
