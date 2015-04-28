@@ -24,7 +24,7 @@ public partial class MainWindow: Gtk.Window
 	protected void psalmSelect (object sender, EventArgs e)
 	{
 		var selected = psalmNumberSelected.Value;
-	    //psalmViewingSpace
+		psalmViewingSpace.Buffer.SetText("Psalm " + selected);
 		Console.WriteLine (selected);
 	
 	}
