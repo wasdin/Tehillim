@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Tehillim
 {
@@ -6,11 +7,11 @@ namespace Tehillim
 	{
 		int number;
 		String name;
-		List verses;
+		List<String> verses;
 		Meter meter;
 
 
-		public Psalm (int number, String name, List verses, Meter meter)
+		public Psalm (int number, String name, List<String> verses, Meter meter)
 		{
 			this.number = number;
 			this.name = name;
@@ -22,7 +23,7 @@ namespace Tehillim
 		{
 			this.number = number;
 			this.name = name;
-			verses = new List();
+			verses = new List<String>();
 			this.meter = meter;
 		}
 
