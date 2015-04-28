@@ -5,10 +5,10 @@ namespace Tehillim
 {
 	public class Psalm
 	{
-		int number;
-		String name;
-		List<String> verses;
-		Meter meter;
+		public int number;
+		public String name;
+		public List<String> verses;
+		public Meter meter;
 
 
 		public Psalm (int number, String name, List<String> verses, Meter meter)
@@ -26,6 +26,17 @@ namespace Tehillim
 			verses = new List<String>();
 			this.meter = meter;
 		}
+
+		public override String ToString ()
+		{
+			String output = "";
+			output += name;
+			for (int i=0; i<verses.Count; i++) {
+				output += "\n" + verses[i];
+			}
+			return output;
+		}
+
 
 	}
 }
