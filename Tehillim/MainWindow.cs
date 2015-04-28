@@ -20,9 +20,12 @@ public partial class MainWindow: Gtk.Window
 		about.Version = "1.0";
 		about.Run ();
 		about.Destroy();
-	}	protected void psalmSelected (object sender, EventArgs e)
+	}	
+	protected void psalmSelect (object sender, EventArgs e)
 	{
+		var selected = psalmNumberSelected.Value;
+	    //psalmViewingSpace
+		Console.WriteLine (selected);
+	
 	}
-
-
 }
