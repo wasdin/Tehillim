@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 
+
 namespace Tehillim
 {
 	public class Psalm
@@ -26,6 +27,9 @@ namespace Tehillim
 			verses = new List<String>();
 			this.meter = meter;
 		}
+
+
+
 
 		public override String ToString ()
 		{
