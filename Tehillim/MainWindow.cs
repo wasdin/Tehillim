@@ -1,9 +1,7 @@
 using System;
 using Gtk;
 using Tehillim;
-using Newtonsoft.Json;
-using System.IO;
-using System.Collections.Generic;
+
 
 public partial class MainWindow: Gtk.Window
 {	
@@ -42,18 +40,6 @@ public partial class MainWindow: Gtk.Window
 		String output = psalms[117].ToString();
 
 		psalmViewingSpace.Buffer.SetText (output);
-
-		String json = "";
-		using (StreamReader r = new StreamReader("smv_1650.json"))
-   	 	{
-        	json = r.ReadToEnd();
-    	}
-
-		dynamic array = JsonConvert.DeserializeObject(json);
-		foreach(var item in array)
-		{
-   			Console.WriteLine("{0} {1}", item.temp, item.vcc);
-		}
 	
 	}
 }
