@@ -11,3 +11,4 @@ test-results/
 
 *.dll
 *.exe
+[Bb]in/
