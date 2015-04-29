@@ -60,9 +60,7 @@
     <Reference Include="libstetic">
       <HintPath>..\..\..\..\..\usr\lib\monodevelop\AddIns\MonoDevelop.GtkCore\libstetic.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\Downloads\Bin\Net20\Newtonsoft.Json.dll</HintPath>
-    </Reference>
+    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -77,7 +75,6 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Psalm.cs" />
     <Compile Include="Enums.cs" />
-    <Compile Include="JsonConvertTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -86,6 +83,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="smv_1650.json" />
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
 </Project>
