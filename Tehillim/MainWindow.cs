@@ -28,16 +28,14 @@ public partial class MainWindow: Gtk.Window
 	protected void psalmSelect (object sender, EventArgs e)
 	{
 
-		var selected = psalmNumberSelected.Value;
+		int selected = psalmNumberSelected.Value;
 		psalmViewingSpace.Buffer.SetText ("Psalm " + selected);
 		Console.WriteLine (selected);
 
-		Psalm[] psalms = new Psalm[150];
-		psalms [117] = new Psalm (117, "Psalm 117", Tehillim.Meter.CommonMeter);
-		psalms [117].verses.Add ("O give ye praise unto the Lord, \n\tall nations that be; \nLikewise, ye people all, accord \n\this name to magnify.");
-		psalms [117].verses.Add ("\nFor great to us-ward ever are \n\this loving-kindnesses: \nHis truth endures for evermore. \n\tThe Lord O do ye bless.");
+		SMV_Builder builder = new SMV_Builder();
+		var psalms = builder.build();
 
-		String output = psalms[117].ToString();
+		String output = psalms[selected][0].ToString();
 
 		psalmViewingSpace.Buffer.SetText (output);
 	

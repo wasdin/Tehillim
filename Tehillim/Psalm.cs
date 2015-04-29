@@ -28,9 +28,6 @@ namespace Tehillim
 			this.meter = meter;
 		}
 
-
-
-
 		public override String ToString ()
 		{
 			String output = "";
