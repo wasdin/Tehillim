@@ -9,7 +9,6 @@ public partial class MainWindow: Gtk.Window
 	{
 		Build ();
 
-
 	}
 	
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
@@ -27,17 +26,12 @@ public partial class MainWindow: Gtk.Window
 	}	
 	protected void psalmSelect (object sender, EventArgs e)
 	{
-
-		int selected = psalmNumberSelected.Value;
+		int selected = Convert.ToInt32(psalmNumberSelected.Value);
 		psalmViewingSpace.Buffer.SetText ("Psalm " + selected);
-		Console.WriteLine (selected);
 
 		SMV_Builder builder = new SMV_Builder();
-		var psalms = builder.build();
 
-		String output = psalms[selected][0].ToString();
 
-		psalmViewingSpace.Buffer.SetText (output);
-	
+		psalmViewingSpace.Buffer.SetText (builder.getPsalm(selected));
 	}
 }

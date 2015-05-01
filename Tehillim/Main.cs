@@ -1,5 +1,8 @@
 using System;
+using System.IO;
+using System.Collections.Generic;
 using Gtk;
+using Newtonsoft.Json;
 
 namespace Tehillim
 {
@@ -11,6 +14,10 @@ namespace Tehillim
 			MainWindow win = new MainWindow ();
 			win.Show ();
 			Application.Run ();
+
+
+
+
 		}
 	}
 }

@@ -1,26 +1,39 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using Newtonsoft.Json;
 
 namespace Tehillim
 {
 	public class SMV_Builder
 	{
+		RootObject psalter;
+
 		public SMV_Builder ()
 		{
+			RootObject tempObject = null;
+			using (StreamReader file = File.OpenText("../../smv1650.json")) {
+				JsonSerializer serializer = new JsonSerializer ();
+				tempObject = (RootObject)serializer.Deserialize (file, typeof(RootObject));
+			}
 
-
+			psalter = tempObject;
 		}
 
-		public List<Psalm>[] build ()
+		public String getPsalm (int number)
 		{
-			List<Psalm>[] psalms = new List<Psalm>[150];
-			psalms[117] = new List<Psalm>();
-			psalms [117].Add(new Psalm (117, "Psalm 117", Tehillim.Meter.CommonMeter));
-			psalms [117][0].verses.Add ("O give ye praise unto the Lord, \n\tall nations that be; \nLikewise, ye people all, accord \n\this name to magnify.");
-			psalms [117][0].verses.Add ("\nFor great to us-ward ever are \n\this loving-kindnesses: \nHis truth endures for evermore. \n\tThe Lord O do ye bless.");
-
-			return psalms;
+			for (int i=0; i<psalter.Books[0].Chapters.Count; i++) {
+				String chapterString = psalter.Books[0].Chapters[i].Name.ToString();
+				String chapter = Regex.Replace(chapterString, @"\D", "");
+				int chapterNumber = int.Parse(chapter);
+				if (chapterNumber == number) {
+					return psalter.Books[0].Chapters[i].ToString ();
+				}
+			}
+			return "";
 		}
+
 
 	}
 }

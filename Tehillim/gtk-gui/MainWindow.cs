@@ -130,6 +130,7 @@ public partial class MainWindow
 		this.psalmViewingSpace.CanFocus = true;
 		this.psalmViewingSpace.Name = "psalmViewingSpace";
 		this.psalmViewingSpace.Editable = false;
+		this.psalmViewingSpace.LeftMargin = 10;
 		this.GtkScrolledWindow.Add (this.psalmViewingSpace);
 		this.vbox3.Add (this.GtkScrolledWindow);
 		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.vbox3 [this.GtkScrolledWindow]));
