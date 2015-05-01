@@ -10,16 +10,14 @@ namespace Tehillim
 	{
 		public static void Main (string[] args)
 		{
-			//Application.Init ();
-			//MainWindow win = new MainWindow ();
-			//win.Show ();
-			//Application.Run ();
-
-			SMV_Builder builder = new SMV_Builder();
-			builder.build ();
+			Application.Init ();
+			MainWindow win = new MainWindow ();
+			win.Show ();
+			Application.Run ();
 
 
-			//Console.WriteLine (list.Count);
+
+
 		}
 	}
 }

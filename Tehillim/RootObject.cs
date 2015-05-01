@@ -20,6 +20,19 @@ public class Chapter
     public int Enum { get; set; }
     public string Name { get; set; }
     public List<Paragraph> Paragraphs { get; set; }
+
+		public override string ToString ()
+		{
+			String output = "";
+			for (int i=0; i<Paragraphs.Count; i++) {
+				for (int j=0; j<Paragraphs[i].Verses.Count; j++) {
+					output += Paragraphs[i].Verses[j].Html;
+				}
+			}
+
+			return output;
+		}
+
 }
 
 public class Book
@@ -38,6 +51,7 @@ public class RootObject
     public string ResId { get; set; }
     public List<Book> Books { get; set; }
     public object TableOfContents { get; set; }
+
 }
 }
 

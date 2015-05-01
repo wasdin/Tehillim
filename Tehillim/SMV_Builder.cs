@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 
 namespace Tehillim
@@ -23,8 +24,14 @@ namespace Tehillim
 		public String getPsalm (int number)
 		{
 			for (int i=0; i<psalter.Books[0].Chapters.Count; i++) {
-				int chapter = psalter.Books[0].Chapters[i];
+				String chapterString = psalter.Books[0].Chapters[i].Name.ToString();
+				String chapter = Regex.Replace(chapterString, @"\D", "");
+				int chapterNumber = int.Parse(chapter);
+				if (chapterNumber == number) {
+					return psalter.Books[0].Chapters[chapterNumber].ToString ();
+				}
 			}
+			return "";
 		}
 
 
