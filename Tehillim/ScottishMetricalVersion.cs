@@ -6,11 +6,11 @@ using Newtonsoft.Json;
 
 namespace Tehillim
 {
-	public class SMV_Builder
+	public class ScottishMetricalVersion
 	{
 		RootObject psalter;
 
-		public SMV_Builder ()
+		public ScottishMetricalVersion ()
 		{
 			RootObject tempObject = null;
 			using (StreamReader file = File.OpenText("../../smv1650.json")) {

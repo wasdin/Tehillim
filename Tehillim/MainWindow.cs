@@ -31,7 +31,7 @@ public partial class MainWindow: Gtk.Window
 		int selected = Convert.ToInt32(psalmNumberSelected.Value);
 		psalmViewingSpace.Buffer.SetText ("Psalm " + selected);
 
-		SMV_Builder builder = new SMV_Builder();
+		ScottishMetricalVersion builder = new ScottishMetricalVersion();
 
 
 		psalmViewingSpace.Buffer.SetText (builder.getPsalm(selected));
