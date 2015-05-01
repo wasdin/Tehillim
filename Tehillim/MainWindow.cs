@@ -20,7 +20,9 @@ public partial class MainWindow: Gtk.Window
 	{
 		AboutDialog about = new AboutDialog();
 		about.ProgramName = "Tehillim";
-		about.Version = "1.0";
+		about.Version = "0.1";
+		about.Comments = "The 1650 Scottish Metrical Psalter";
+		about.Website = "https://bitbucket.org/jakewasdin/tehillim/";
 		about.Run ();
 		about.Destroy();
 	}	
