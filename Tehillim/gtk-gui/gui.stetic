@@ -160,6 +160,7 @@
                         <property name="ShowScrollbars">True</property>
                         <property name="Editable">False</property>
                         <property name="Text" translatable="yes" />
+                        <property name="LeftMargin">10</property>
                       </widget>
                     </child>
                   </widget>

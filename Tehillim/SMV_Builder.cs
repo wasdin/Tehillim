@@ -13,7 +13,7 @@ namespace Tehillim
 		public SMV_Builder ()
 		{
 			RootObject tempObject = null;
-			using (StreamReader file = File.OpenText("../../smv_1650.json")) {
+			using (StreamReader file = File.OpenText("../../smv1650.json")) {
 				JsonSerializer serializer = new JsonSerializer ();
 				tempObject = (RootObject)serializer.Deserialize (file, typeof(RootObject));
 			}
@@ -28,7 +28,7 @@ namespace Tehillim
 				String chapter = Regex.Replace(chapterString, @"\D", "");
 				int chapterNumber = int.Parse(chapter);
 				if (chapterNumber == number) {
-					return psalter.Books[0].Chapters[chapterNumber].ToString ();
+					return psalter.Books[0].Chapters[i].ToString ();
 				}
 			}
 			return "";

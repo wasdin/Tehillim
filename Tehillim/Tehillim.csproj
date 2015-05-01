@@ -91,6 +91,6 @@
     <Folder Include="bin\Debug\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="smv_1650.json" />
+    <None Include="smv1650.json" />
   </ItemGroup>
 </Project>

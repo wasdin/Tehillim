@@ -24,9 +24,11 @@ public class Chapter
 		public override string ToString ()
 		{
 			String output = "";
+			output += Name;
 			for (int i=0; i<Paragraphs.Count; i++) {
+				output += "\n";
 				for (int j=0; j<Paragraphs[i].Verses.Count; j++) {
-					output += Paragraphs[i].Verses[j].Html;
+					output += "\n" + Paragraphs[i].Verses[j].Html;
 				}
 			}
 
