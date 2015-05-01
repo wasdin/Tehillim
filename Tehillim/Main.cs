@@ -15,23 +15,11 @@ namespace Tehillim
 			//win.Show ();
 			//Application.Run ();
 
-			StreamReader re = File.OpenText("../../smv_1650.json");
-			JsonTextReader jsonReader = new JsonTextReader(re);
-			JsonSerializer jsonSerializer = new JsonSerializer();
-			object parsedData = jsonSerializer.Deserialize(jsonReader);
+			SMV_Builder builder = new SMV_Builder();
+			builder.build ();
 
-			List<RootObject> list = new List<RootObject>();
 
-			while (jsonReader.Read())
-            {
-                Console.WriteLine(jsonReader.Value);
-				String temp = jsonReader.Value.ToString ();
-				list.Add(JsonConvert.DeserializeObject<RootObject>(temp));
-
-            }
-            jsonReader.Close();
-
-			Console.WriteLine (list.Count);
+			//Console.WriteLine (list.Count);
 		}
 	}
 }
