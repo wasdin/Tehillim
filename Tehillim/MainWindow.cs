@@ -28,12 +28,12 @@ public partial class MainWindow: Gtk.Window
 	}	
 	protected void psalmSelect (object sender, EventArgs e)
 	{
-		int selected = Convert.ToInt32(psalmNumberSelected.Value);
-		psalmViewingSpace.Buffer.SetText ("Psalm " + selected);
+		int selected = Convert.ToInt32(psalmNumberSelected2.Value);
+		psalmViewingSpace2.Buffer.SetText ("Psalm " + selected);
 
 		ScottishMetricalVersion builder = new ScottishMetricalVersion();
 
 
-		psalmViewingSpace.Buffer.SetText (builder.getPsalm(selected));
+		psalmViewingSpace2.Buffer.SetText (builder.getPsalm(selected));
 	}
 }
