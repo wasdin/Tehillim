@@ -58,7 +58,7 @@
           <widget class="Gtk.HPaned" id="hpaned1">
             <property name="MemberName" />
             <property name="CanFocus">True</property>
-            <property name="Position">389</property>
+            <property name="Position">384</property>
             <child>
               <widget class="Gtk.VBox" id="vbox2">
                 <property name="MemberName" />
@@ -102,6 +102,7 @@
                         <property name="IsTextCombo">True</property>
                         <property name="Items" translatable="yes">1650 SMV
 1769 KJV</property>
+                        <property name="Active">0</property>
                       </widget>
                       <packing>
                         <property name="Position">2</property>
@@ -143,7 +144,8 @@
                         <property name="CanFocus">True</property>
                         <property name="ShowScrollbars">True</property>
                         <property name="Editable">False</property>
-                        <property name="Text" translatable="yes">To view a Psalm, select a psalm number and click 'Select'</property>
+                        <property name="Text" translatable="yes">To view a Psalm, select a psalm number 
+and click 'Select'</property>
                         <property name="LeftMargin">10</property>
                       </widget>
                     </child>
@@ -201,6 +203,7 @@
                         <property name="IsTextCombo">True</property>
                         <property name="Items" translatable="yes">1650 SMV
 1769 KJV</property>
+                        <property name="Active">1</property>
                       </widget>
                       <packing>
                         <property name="Position">2</property>
@@ -242,7 +245,8 @@
                         <property name="CanFocus">True</property>
                         <property name="ShowScrollbars">True</property>
                         <property name="Editable">False</property>
-                        <property name="Text" translatable="yes">To view a Psalm, select a psalm number and click 'Select'</property>
+                        <property name="Text" translatable="yes">To view a Psalm, select a psalm number 
+and click 'Select'</property>
                         <property name="LeftMargin">10</property>
                       </widget>
                     </child>

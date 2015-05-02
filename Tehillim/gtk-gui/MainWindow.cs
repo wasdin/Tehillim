@@ -64,7 +64,7 @@ public partial class MainWindow
 		this.hpaned1 = new global::Gtk.HPaned ();
 		this.hpaned1.CanFocus = true;
 		this.hpaned1.Name = "hpaned1";
-		this.hpaned1.Position = 389;
+		this.hpaned1.Position = 384;
 		// Container child hpaned1.Gtk.Paned+PanedChild
 		this.vbox2 = new global::Gtk.VBox ();
 		this.vbox2.Spacing = 6;
@@ -97,6 +97,7 @@ public partial class MainWindow
 		this.translationSelector1.AppendText (global::Mono.Unix.Catalog.GetString ("1650 SMV"));
 		this.translationSelector1.AppendText (global::Mono.Unix.Catalog.GetString ("1769 KJV"));
 		this.translationSelector1.Name = "translationSelector1";
+		this.translationSelector1.Active = 0;
 		this.hbox2.Add (this.translationSelector1);
 		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.translationSelector1]));
 		w5.Position = 2;
@@ -124,7 +125,7 @@ public partial class MainWindow
 		this.GtkScrolledWindow1.ShadowType = ((global::Gtk.ShadowType)(1));
 		// Container child GtkScrolledWindow1.Gtk.Container+ContainerChild
 		this.psalmViewingSpace1 = new global::Gtk.TextView ();
-		this.psalmViewingSpace1.Buffer.Text = "To view a Psalm, select a psalm number and click 'Select'";
+		this.psalmViewingSpace1.Buffer.Text = "To view a Psalm, select a psalm number \nand click 'Select'";
 		this.psalmViewingSpace1.CanFocus = true;
 		this.psalmViewingSpace1.Name = "psalmViewingSpace1";
 		this.psalmViewingSpace1.Editable = false;
@@ -169,6 +170,7 @@ public partial class MainWindow
 		this.translationSelector2.AppendText (global::Mono.Unix.Catalog.GetString ("1650 SMV"));
 		this.translationSelector2.AppendText (global::Mono.Unix.Catalog.GetString ("1769 KJV"));
 		this.translationSelector2.Name = "translationSelector2";
+		this.translationSelector2.Active = 1;
 		this.hbox3.Add (this.translationSelector2);
 		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.translationSelector2]));
 		w13.Position = 2;
@@ -196,7 +198,7 @@ public partial class MainWindow
 		this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
 		// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
 		this.psalmViewingSpace2 = new global::Gtk.TextView ();
-		this.psalmViewingSpace2.Buffer.Text = "To view a Psalm, select a psalm number and click 'Select'";
+		this.psalmViewingSpace2.Buffer.Text = "To view a Psalm, select a psalm number \nand click 'Select'";
 		this.psalmViewingSpace2.CanFocus = true;
 		this.psalmViewingSpace2.Name = "psalmViewingSpace2";
 		this.psalmViewingSpace2.Editable = false;
