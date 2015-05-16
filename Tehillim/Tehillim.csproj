@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{774F3AC7-7AAC-4AA7-80A9-9D0BB577E80C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -63,6 +63,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\..\Downloads\Bin\Net20\Newtonsoft.Json.dll</HintPath>
+      <Package>monodevelop</Package>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +81,7 @@
     <Compile Include="Enums.cs" />
     <Compile Include="ScottishMetricalVersion.cs" />
     <Compile Include="RootObject.cs" />
+    <Compile Include="AuthorisedVersion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -92,5 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="smv1650.json" />
+    <None Include="kjv1769.txt" />
   </ItemGroup>
 </Project>

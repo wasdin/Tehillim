@@ -4,29 +4,51 @@
 public partial class MainWindow
 {
 	private global::Gtk.UIManager UIManager;
-	private global::Gtk.Action FileAction;
-	private global::Gtk.Action HelpAction;
-	private global::Gtk.Action AboutAction;
-	private global::Gtk.VBox vbox1;
-	private global::Gtk.MenuBar mainMenuBar;
-	private global::Gtk.HPaned hpaned1;
-	private global::Gtk.VBox vbox2;
-	private global::Gtk.HBox hbox2;
-	private global::Gtk.SpinButton psalmNumberSelected1;
-	private global::Gtk.HSeparator hseparator2;
-	private global::Gtk.ComboBox translationSelector1;
-	private global::Gtk.Button translationSelect1;
-	private global::Gtk.ScrolledWindow GtkScrolledWindow1;
-	private global::Gtk.TextView psalmViewingSpace1;
-	private global::Gtk.VBox vbox3;
-	private global::Gtk.HBox hbox3;
-	private global::Gtk.SpinButton psalmNumberSelected2;
-	private global::Gtk.HSeparator hseparator3;
-	private global::Gtk.ComboBox translationSelector2;
-	private global::Gtk.Button translationSelect2;
-	private global::Gtk.ScrolledWindow GtkScrolledWindow;
-	private global::Gtk.TextView psalmViewingSpace2;
 	
+	private global::Gtk.Action FileAction;
+	
+	private global::Gtk.Action HelpAction;
+	
+	private global::Gtk.Action AboutAction;
+	
+	private global::Gtk.VBox vbox1;
+	
+	private global::Gtk.MenuBar mainMenuBar;
+	
+	private global::Gtk.HPaned hpaned1;
+	
+	private global::Gtk.VBox vbox2;
+	
+	private global::Gtk.HBox hbox2;
+	
+	private global::Gtk.SpinButton psalmNumberSelected1;
+	
+	private global::Gtk.HSeparator hseparator2;
+	
+	private global::Gtk.ComboBox translationSelector1;
+	
+	private global::Gtk.Button translationSelect1;
+	
+	private global::Gtk.ScrolledWindow GtkScrolledWindow1;
+	
+	private global::Gtk.TextView psalmViewingSpace1;
+	
+	private global::Gtk.VBox vbox3;
+	
+	private global::Gtk.HBox hbox3;
+	
+	private global::Gtk.SpinButton psalmNumberSelected2;
+	
+	private global::Gtk.HSeparator hseparator3;
+	
+	private global::Gtk.ComboBox translationSelector2;
+	
+	private global::Gtk.Button translationSelect2;
+	
+	private global::Gtk.ScrolledWindow GtkScrolledWindow;
+	
+	private global::Gtk.TextView psalmViewingSpace2;
+
 	protected virtual void Build ()
 	{
 		global::Stetic.Gui.Initialize (this);
@@ -67,6 +89,7 @@ public partial class MainWindow
 		this.hpaned1.Position = 384;
 		// Container child hpaned1.Gtk.Paned+PanedChild
 		this.vbox2 = new global::Gtk.VBox ();
+		this.vbox2.Name = "vbox2";
 		this.vbox2.Spacing = 6;
 		// Container child vbox2.Gtk.Box+BoxChild
 		this.hbox2 = new global::Gtk.HBox ();
@@ -106,6 +129,7 @@ public partial class MainWindow
 		// Container child hbox2.Gtk.Box+BoxChild
 		this.translationSelect1 = new global::Gtk.Button ();
 		this.translationSelect1.CanFocus = true;
+		this.translationSelect1.Events = ((global::Gdk.EventMask)(256));
 		this.translationSelect1.Name = "translationSelect1";
 		this.translationSelect1.UseUnderline = true;
 		this.translationSelect1.Label = global::Mono.Unix.Catalog.GetString ("Select");

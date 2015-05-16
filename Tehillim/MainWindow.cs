@@ -26,7 +26,7 @@ public partial class MainWindow: Gtk.Window
 		about.Run ();
 		about.Destroy();
 	}	
-	protected void psalmSelect (object sender, EventArgs e)
+	protected void pane1click (object sender, EventArgs e)
 	{
 		int selected = Convert.ToInt32(psalmNumberSelected2.Value);
 		psalmViewingSpace2.Buffer.SetText ("Psalm " + selected);
@@ -35,5 +35,10 @@ public partial class MainWindow: Gtk.Window
 
 
 		psalmViewingSpace2.Buffer.SetText (builder.getPsalm(selected));
+	}
+
+	protected void pane1click() (object sender, EventArgs e)
+	{
+		throw new NotImplementedException ();
 	}
 }
