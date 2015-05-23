@@ -118,6 +118,7 @@
                         <property name="Type">TextOnly</property>
                         <property name="Label" translatable="yes">Select</property>
                         <property name="UseUnderline">True</property>
+                        <signal name="Clicked" handler="selectPsalm1" />
                       </widget>
                       <packing>
                         <property name="Position">3</property>
@@ -219,6 +220,7 @@ and click 'Select'</property>
                         <property name="Type">TextOnly</property>
                         <property name="Label" translatable="yes">Select</property>
                         <property name="UseUnderline">True</property>
+                        <signal name="Clicked" handler="selectPsalm2" />
                       </widget>
                       <packing>
                         <property name="Position">3</property>

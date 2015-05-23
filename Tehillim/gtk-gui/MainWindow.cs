@@ -244,5 +244,7 @@ public partial class MainWindow
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 		this.AboutAction.Activated += new global::System.EventHandler (this.about);
+		this.translationSelect1.Clicked += new global::System.EventHandler (this.selectPsalm1);
+		this.translationSelect2.Clicked += new global::System.EventHandler (this.selectPsalm2);
 	}
 }

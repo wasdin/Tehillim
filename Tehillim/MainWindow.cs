@@ -36,9 +36,39 @@ public partial class MainWindow: Gtk.Window
 
 		psalmViewingSpace2.Buffer.SetText (builder.getPsalm(selected));
 	}
-
-	protected void pane1click() (object sender, EventArgs e)
+		
+	protected void selectPsalm1 (object sender, EventArgs e)
 	{
-		throw new NotImplementedException ();
+		ScottishMetricalVersion SMV_builder = new ScottishMetricalVersion();
+		AuthorisedVersion AV_builder = new AuthorisedVersion ();
+
+		String versionSelected = translationSelector1.ActiveText;
+		int selected = Convert.ToInt32(psalmNumberSelected1.Value);
+		psalmViewingSpace1.Buffer.SetText ("Psalm " + selected);
+
+		if (versionSelected.StartsWith("1769")) {
+			psalmViewingSpace1.Buffer.SetText (AV_builder.getPsalm(selected));
+		}
+		else if (versionSelected.StartsWith("1650")) {
+			psalmViewingSpace1.Buffer.SetText (SMV_builder.getPsalm(selected));
+		}
+			
+	}
+
+	protected void selectPsalm2 (object sender, EventArgs e)
+	{
+		ScottishMetricalVersion SMV_builder = new ScottishMetricalVersion();
+		AuthorisedVersion AV_builder = new AuthorisedVersion ();
+
+		String versionSelected = translationSelector2.ActiveText;
+		int selected = Convert.ToInt32(psalmNumberSelected1.Value);
+		psalmViewingSpace2.Buffer.SetText ("Psalm " + selected);
+
+		if (versionSelected.StartsWith("1769")) {
+			psalmViewingSpace2.Buffer.SetText (AV_builder.getPsalm(selected));
+		}
+		else if (versionSelected.StartsWith("1650")) {
+			psalmViewingSpace2.Buffer.SetText (SMV_builder.getPsalm(selected));
+		}
 	}
 }
