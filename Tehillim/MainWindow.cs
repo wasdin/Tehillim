@@ -20,20 +20,45 @@ public partial class MainWindow: Gtk.Window
 	{
 		AboutDialog about = new AboutDialog();
 		about.ProgramName = "Tehillim";
-		about.Version = "0.1";
+		about.Version = "0.2";
 		about.Comments = "The 1650 Scottish Metrical Psalter";
 		about.Website = "https://bitbucket.org/jakewasdin/tehillim/";
 		about.Run ();
 		about.Destroy();
 	}	
-	protected void psalmSelect (object sender, EventArgs e)
+		
+	protected void selectPsalm1 (object sender, EventArgs e)
 	{
-		int selected = Convert.ToInt32(psalmNumberSelected.Value);
-		psalmViewingSpace.Buffer.SetText ("Psalm " + selected);
+		ScottishMetricalVersion SMV_builder = new ScottishMetricalVersion();
+		AuthorisedVersion AV_builder = new AuthorisedVersion ();
 
-		ScottishMetricalVersion builder = new ScottishMetricalVersion();
+		String versionSelected = translationSelector1.ActiveText;
+		int selected = Convert.ToInt32(psalmNumberSelected1.Value);
+		psalmViewingSpace1.Buffer.SetText ("Psalm " + selected);
 
+		if (versionSelected.StartsWith("1769")) {
+			psalmViewingSpace1.Buffer.SetText (AV_builder.getPsalm(selected));
+		}
+		else if (versionSelected.StartsWith("1650")) {
+			psalmViewingSpace1.Buffer.SetText (SMV_builder.getPsalm(selected));
+		}
+			
+	}
 
-		psalmViewingSpace.Buffer.SetText (builder.getPsalm(selected));
+	protected void selectPsalm2 (object sender, EventArgs e)
+	{
+		ScottishMetricalVersion SMV_builder = new ScottishMetricalVersion();
+		AuthorisedVersion AV_builder = new AuthorisedVersion ();
+
+		String versionSelected = translationSelector2.ActiveText;
+		int selected = Convert.ToInt32(psalmNumberSelected2.Value);
+		psalmViewingSpace2.Buffer.SetText ("Psalm " + selected);
+
+		if (versionSelected.StartsWith("1769")) {
+			psalmViewingSpace2.Buffer.SetText (AV_builder.getPsalm(selected));
+		}
+		else if (versionSelected.StartsWith("1650")) {
+			psalmViewingSpace2.Buffer.SetText (SMV_builder.getPsalm(selected));
+		}
 	}
 }

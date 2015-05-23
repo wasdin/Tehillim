@@ -62,7 +62,8 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\..\Downloads\Bin\Net20\Newtonsoft.Json.dll</HintPath>
+      <Package>monodevelop</Package>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +81,7 @@
     <Compile Include="Enums.cs" />
     <Compile Include="ScottishMetricalVersion.cs" />
     <Compile Include="RootObject.cs" />
+    <Compile Include="AuthorisedVersion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -92,6 +94,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="smv1650.json" />
+<<<<<<< HEAD
     <None Include="packages.config" />
+=======
+    <None Include="kjv1769.txt" />
+>>>>>>> origin/Issue_2-Prose_versions
   </ItemGroup>
 </Project>
