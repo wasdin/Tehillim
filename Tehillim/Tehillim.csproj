@@ -94,10 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="smv1650.json" />
-<<<<<<< HEAD
     <None Include="packages.config" />
-=======
     <None Include="kjv1769.txt" />
->>>>>>> origin/Issue_2-Prose_versions
   </ItemGroup>
 </Project>
