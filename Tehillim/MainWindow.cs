@@ -26,16 +26,6 @@ public partial class MainWindow: Gtk.Window
 		about.Run ();
 		about.Destroy();
 	}	
-	protected void pane1click (object sender, EventArgs e)
-	{
-		int selected = Convert.ToInt32(psalmNumberSelected2.Value);
-		psalmViewingSpace2.Buffer.SetText ("Psalm " + selected);
-
-		ScottishMetricalVersion builder = new ScottishMetricalVersion();
-
-
-		psalmViewingSpace2.Buffer.SetText (builder.getPsalm(selected));
-	}
 		
 	protected void selectPsalm1 (object sender, EventArgs e)
 	{
