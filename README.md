@@ -10,9 +10,14 @@ Feel free to contribute. Particularly, it would be helpful to have testing and i
 Let us come before his presence with thanksgiving, and make a joyful noise unto him with psalms." (Psalm 95:1-2 AV)
 
 ## Screenshot ##
+
+Git master branch from May 22, 2015; Includes multiple translation selection
+![Screenshot from 2015-05-22 21:10:53.png](https://bitbucket.org/repo/MRE975/images/2846950788-Screenshot%20from%202015-05-22%2021:10:53.png)
+
 Git master branch from May 1, 2015; First public version
 
 ![tehilim_point1.png](https://bitbucket.org/repo/MRE975/images/1798854757-tehilim_point1.png)
+
 
 
 ## Thanks to... ##
