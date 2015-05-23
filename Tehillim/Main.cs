@@ -10,9 +10,6 @@ namespace Tehillim
 	{
 		public static void Main (string[] args)
 		{
-			AuthorisedVersion builder = new AuthorisedVersion ();
-			Console.WriteLine(builder.getPsalm (1));
-
 			Application.Init ();
 			MainWindow win = new MainWindow ();
 			win.Show ();
