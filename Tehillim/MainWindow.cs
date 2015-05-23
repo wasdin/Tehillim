@@ -51,7 +51,7 @@ public partial class MainWindow: Gtk.Window
 		AuthorisedVersion AV_builder = new AuthorisedVersion ();
 
 		String versionSelected = translationSelector2.ActiveText;
-		int selected = Convert.ToInt32(psalmNumberSelected1.Value);
+		int selected = Convert.ToInt32(psalmNumberSelected2.Value);
 		psalmViewingSpace2.Buffer.SetText ("Psalm " + selected);
 
 		if (versionSelected.StartsWith("1769")) {
