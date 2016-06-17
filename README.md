@@ -11,9 +11,9 @@ Let us come before his presence with thanksgiving, and make a joyful noise unto 
 
 ## Screenshot ##
 
-Git master branch from May 22, 2015; Includes multiple translation selection.
+Git master branch from June 17, 2016; Includes multiple translation selection.
 
-![teh2.png](https://bitbucket.org/repo/MRE975/images/2944408231-teh2.png)
+![teh2.png](http://i.imgur.com/zO7ZrDb.png)
 
 Git master branch from May 1, 2015; First public version
 
