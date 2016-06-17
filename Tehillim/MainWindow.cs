@@ -22,7 +22,7 @@ public partial class MainWindow: Gtk.Window
 		about.ProgramName = "Tehillim";
 		about.Version = "0.2";
 		about.Comments = "The 1650 Scottish Metrical Psalter";
-		about.Website = "https://bitbucket.org/jakewasdin/tehillim/";
+		about.Website = "https://github.com/wasdin/Tehillim";
 		about.Run ();
 		about.Destroy();
 	}	
