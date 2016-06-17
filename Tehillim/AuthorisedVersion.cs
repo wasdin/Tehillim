@@ -40,8 +40,12 @@ namespace Tehillim
 
 			String output = "";
 			for (int i = start; i < end; i++) {
-				output += "\n" + lines [i];
+				if (lines [i].StartsWith("{")) 
+					output += "\n" + lines [i].Split ('}') [1];
+				else
+					output += "\n" + lines [i];
 			}
+
 			return output;
 		}
 
