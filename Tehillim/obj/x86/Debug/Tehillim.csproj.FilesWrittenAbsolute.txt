@@ -1,0 +1,7 @@
+/Users/jake/code/Tehillim/Tehillim/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/jake/code/Tehillim/Tehillim/obj/x86/Debug/Tehillim.gtk-gui.gui.stetic
+/Users/jake/code/Tehillim/Tehillim/bin/Debug/Tehillim.exe.mdb
+/Users/jake/code/Tehillim/Tehillim/bin/Debug/Tehillim.exe
+/Users/jake/code/Tehillim/Tehillim/obj/x86/Debug/Tehillim.exe
+/Users/jake/code/Tehillim/Tehillim/obj/x86/Debug/Tehillim.exe.mdb
+/Users/jake/code/Tehillim/Tehillim/bin/Debug/Newtonsoft.Json.dll
